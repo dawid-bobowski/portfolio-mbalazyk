@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
-import LogoPlaceholder from '../../assets/200x100.png';
 import SocialLinks from './SocialLinks';
 import MenuItem from './MenuItem';
+import Logo from './Logo';
 
 const MENU_OPTIONS: string[] = [
   'Strona główna',
@@ -22,11 +22,7 @@ const Banner = () => {
         padding: '0 64px',
       }}
     >
-      <Box sx={{
-        width: 200,
-        height: 100,
-        backgroundImage: `url(${LogoPlaceholder})`,
-      }}></Box>
+      <Logo />
       <Box sx={{
         height: '100%',
         }}>
