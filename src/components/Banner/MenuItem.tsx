@@ -14,11 +14,13 @@ const MenuItem = (props: IMenuItemProps) => {
       justifyContent: 'center',
       padding: '0 16px',
       '&:hover': {
-        backgroundColor: 'rgba(0,0,0,0.1)',
+        backgroundColor: 'rgba(0,0,0,0.03)',
         cursor: 'pointer',
       }
     }}>
-      <Typography>{props.text}</Typography>
+      <Typography sx={{
+        fontFamily: '"Source Sans 3", sans-serif',
+      }}>{props.text}</Typography>
     </Box>
   )
 }

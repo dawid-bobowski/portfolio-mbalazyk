@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const ICON_STYLE = {
+const iconStyle = {
   fontSize: 28,
   '&:hover': {
     cursor: 'pointer',
@@ -18,8 +18,8 @@ const SocialLinks = () => {
       justifyContent: 'center',
       padding: '0 16px',
     }}>
-      <LinkedInIcon sx={ICON_STYLE} />
-      <InstagramIcon sx={ICON_STYLE} />
+      <LinkedInIcon sx={iconStyle} />
+      <InstagramIcon sx={iconStyle} />
     </Box>
   )
 }
