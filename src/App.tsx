@@ -4,6 +4,7 @@ import Banner from './components/Banner';
 import Hero from './components/Hero';
 import { Typography } from '@mui/material';
 import useSticky from './hooks/useSticky';
+import AdPlaceholder from './assets/600x400.png';
 
 // Routing:
 // About
@@ -40,7 +41,8 @@ const App = () => {
           sx={{
             height: 800,
             display: 'flex',
-            justifyContent: 'center',
+            flexDirection: 'column',
+            alignItems: 'center',
             backgroundColor: '#f9f9f9',
             padding: '4rem 0',
           }}
@@ -55,6 +57,17 @@ const App = () => {
           >
             Oferta
           </Typography>
+          <Box
+            sx={{
+              marginTop: '2rem',
+            }}
+          >
+            <img
+              src={AdPlaceholder}
+              width={600}
+              height={400}
+            />
+          </Box>
         </Box>
       </Box>
     </>

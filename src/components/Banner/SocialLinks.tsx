@@ -6,22 +6,25 @@ const iconStyle = {
   fontSize: 28,
   '&:hover': {
     cursor: 'pointer',
-  }
+  },
 };
 
 const SocialLinks = () => {
   return (
-    <Box id='social-links' sx={{
-      gap: 2,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '0 16px',
-    }}>
+    <Box
+      id='social-links'
+      sx={{
+        gap: 2,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '0 1rem',
+      }}
+    >
       <LinkedInIcon sx={iconStyle} />
       <InstagramIcon sx={iconStyle} />
     </Box>
-  )
-}
+  );
+};
 
 export default SocialLinks;

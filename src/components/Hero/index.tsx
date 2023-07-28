@@ -15,12 +15,12 @@ const Hero = () => {
       <Box
         id='hero-left'
         sx={{
-          padding: 8,
           width: '100%',
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
+          padding: '2rem',
         }}
       >
         <HeroText />
@@ -37,7 +37,7 @@ const Hero = () => {
         }}
       ></Box>
     </Box>
-  )
-}
+  );
+};
 
 export default Hero;

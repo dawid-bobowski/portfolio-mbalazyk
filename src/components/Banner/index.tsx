@@ -25,7 +25,7 @@ const Banner = (props: IBannerProps) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '0 64px',
+        padding: '0 4rem',
         backgroundColor: '#fff',
       }}
     >
