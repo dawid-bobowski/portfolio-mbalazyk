@@ -3,15 +3,18 @@ import { Box } from '@mui/system';
 import Banner from './components/Banner';
 import Hero from './components/Hero';
 import { Typography } from '@mui/material';
+import useSticky from './hooks/useSticky';
 
 // Routing:
-  // About
-  // Offer
-  // Portfolio
-  // Reviews
-  // Contact
+// About
+// Offer
+// Portfolio
+// Reviews
+// Contact
 
 const App = () => {
+  const { sticky, stickyRef } = useSticky();
+
   return (
     <>
       <CssBaseline />
@@ -24,9 +27,13 @@ const App = () => {
           display: 'flex',
           flexDirection: 'column',
           margin: '0 auto',
+          marginTop: sticky ? '120px' : 0,
         }}
       >
-        <Banner />
+        <Banner
+          sticky={sticky}
+          stickyRef={stickyRef}
+        />
         <Hero />
         <Box
           id='ad'
@@ -38,11 +45,20 @@ const App = () => {
             padding: '4rem 0',
           }}
         >
-          <Typography variant='h3' component='h1'>Reklama usług</Typography>
+          <Typography
+            variant='h3'
+            component='h1'
+            sx={{
+              fontFamily: 'Vollkorn, serif',
+              fontWeight: 'bold',
+            }}
+          >
+            Oferta
+          </Typography>
         </Box>
       </Box>
     </>
   );
-}
+};
 
 export default App;
