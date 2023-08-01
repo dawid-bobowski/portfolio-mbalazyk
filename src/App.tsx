@@ -9,11 +9,10 @@ import Offer from './components/Offer';
 import Portfolio from './components/Portfolio';
 
 // Routing:
-// About
-// Offer
-// Portfolio
-// Reviews
-// Contact
+// -- About
+// -- Offer
+// -- Portfolio (with feedback included)
+// -- Contact
 
 const App = () => {
   const { sticky, stickyRef } = useSticky();
