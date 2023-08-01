@@ -5,7 +5,7 @@ import Collabs from './Collabs';
 const Portfolio = () => {
   return (
     <Box
-      id='portfolio'
+      id='main-portfolio'
       sx={{
         minHeight: 800,
         display: 'flex',
@@ -17,7 +17,7 @@ const Portfolio = () => {
     >
       <Typography
         variant='h3'
-        component='h1'
+        component='h2'
         sx={{
           fontFamily: 'Vollkorn, serif',
           fontWeight: 'bold',

@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 

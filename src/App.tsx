@@ -7,6 +7,8 @@ import Banner from './components/Banner';
 import Hero from './components/Hero';
 import Offer from './components/Offer';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 // Routing:
 // -- About
@@ -39,6 +41,8 @@ const App = () => {
         <Hero />
         <Offer />
         <Portfolio />
+        <Contact />
+        <Footer />
       </Box>
     </>
   );
