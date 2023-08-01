@@ -23,7 +23,7 @@ const Portfolio = () => {
           fontWeight: 'bold',
         }}
       >
-        Kilka ostatnich współprac
+        Kilka ostatnich współprac 🤝🏻
       </Typography>
       <Collabs />
       <Collabs />

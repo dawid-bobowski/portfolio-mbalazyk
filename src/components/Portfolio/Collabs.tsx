@@ -46,14 +46,25 @@ const Collabs = () => {
         {
           BOOKS.map((book) => {
             return (
-              <Box className='collab' sx={{
+              <Box className='collab' key={book.title} sx={{
                 ...styles.collab,
                 backgroundImage: `url(${book.cover})`,
               }}>
                 <Box sx={styles.collabInner}>
-                  <Typography>{book.title}</Typography>
-                  <Typography>{book.author}</Typography>
-                  <Typography>{book.description}</Typography>
+                  <Typography sx={{
+                    fontFamily: '"Source Sans 3", sans-serif',
+                    fontWeight: 'bold',
+                    fontSize: '1.5rem',
+                  }}>{book.title}</Typography>
+                  <Typography sx={{
+                    fontFamily: '"Source Sans 3", sans-serif',
+                    fontStyle: 'italic',
+                    color: '#a0a0a0',
+                  }}>{book.author}</Typography>
+                  <Typography sx={{
+                    marginTop: '0.5rem',
+                    fontFamily: '"Source Sans 3", sans-serif',
+                  }}>{book.description}</Typography>
                 </Box>
               </Box>
             )
@@ -83,7 +94,7 @@ const styles = {
     backgroundColor: 'rgba(0,0,0,0.7)',
     padding: '1rem',
     color: '#fff',
-    textAlign: 'justify',
+    textAlign: 'center',
     cursor: 'default',
     opacity: 0,
     transition: '0.2s ease-in-out',
