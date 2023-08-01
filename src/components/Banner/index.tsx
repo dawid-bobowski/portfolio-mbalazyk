@@ -27,6 +27,7 @@ const Banner = (props: IBannerProps) => {
         justifyContent: 'space-between',
         padding: '0 4rem',
         backgroundColor: '#fff',
+        borderBottom: '4px #c7263b solid',
       }}
     >
       <Logo />

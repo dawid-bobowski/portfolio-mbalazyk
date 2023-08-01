@@ -6,6 +6,7 @@ import useSticky from './hooks/useSticky';
 import Banner from './components/Banner';
 import Hero from './components/Hero';
 import Offer from './components/Offer';
+import Portfolio from './components/Portfolio';
 
 // Routing:
 // About
@@ -38,6 +39,7 @@ const App = () => {
         />
         <Hero />
         <Offer />
+        <Portfolio />
       </Box>
     </>
   );

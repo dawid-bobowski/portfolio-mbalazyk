@@ -21,8 +21,8 @@ const SocialLinks = () => {
         padding: '0 1rem',
       }}
     >
-      <LinkedInIcon sx={iconStyle} />
-      <InstagramIcon sx={iconStyle} />
+      <LinkedInIcon sx={iconStyle} onClick={() => window.open('https://www.linkedin.com/in/marta-bałażyk-35b850211/', '_blank', 'noreferrer')} />
+      <InstagramIcon sx={iconStyle} onClick={() => window.open('https://www.instagram.com/ko.t.rekta/', '_blank', 'noreferrer')} />
     </Box>
   );
 };
