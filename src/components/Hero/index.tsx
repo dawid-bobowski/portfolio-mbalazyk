@@ -21,9 +21,9 @@ const Hero = () => {
           width: '100%',
           height: '100%',
           display: 'flex',
+          alignItems: 'center',
           flexDirection: 'column',
-          justifyContent: 'center',
-          padding: '2rem',
+          padding: '8rem 2rem 0 2rem',
           position: 'relative',
         }}
         >

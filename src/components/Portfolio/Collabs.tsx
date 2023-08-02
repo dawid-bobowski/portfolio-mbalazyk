@@ -6,8 +6,6 @@ import BookCover3 from '../../assets/book-covers/03.jpg';
 import BookCover4 from '../../assets/book-covers/04.jpg';
 import BookCover5 from '../../assets/book-covers/05.jpg';
 import BookCover6 from '../../assets/book-covers/06.jpg';
-import FeatherGraphicLeft from '/feather-graphic-left.png';
-import FeatherGraphicRight from '/feather-graphic-right.png';
 
 interface IBook {
   title: string;
@@ -63,66 +61,43 @@ const BOOKS: IBook[] = [
 
 const Collabs = () => {
   return (
-    <Box
-        sx={{
-          marginTop: '4rem',
-          display: 'flex',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          gap: '0.5rem',
-          maxWidth: 'calc(900px + 1rem)',
-          position: 'relative',
-        }}
-      >
-        <Box sx={{
-          opacity: 0.1,
-          position: 'absolute',
-          display: 'flex',
-          transform: 'rotate(35deg)',
-          top: '2rem',
-          right: '-22rem',
-        }}>
-          <img src={FeatherGraphicLeft} alt='feather graphic' height={500} />
-        </Box>
-        {
-          BOOKS.map((book) => {
-            return (
-              <Box className='collab' key={book.title} sx={{
-                ...styles.collab,
-                backgroundImage: `url(${book.cover})`,
-                zIndex: 2,
-              }}>
-                <Box sx={styles.collabInner}>
-                  <Typography sx={{
-                    fontFamily: '"Source Sans 3", sans-serif',
-                    fontWeight: 'bold',
-                    fontSize: '1.5rem',
-                  }}>{book.title}</Typography>
-                  <Typography sx={{
-                    fontFamily: '"Source Sans 3", sans-serif',
-                    fontStyle: 'italic',
-                    color: '#a0a0a0',
-                  }}>{book.author}</Typography>
-                  <Typography sx={{
-                    marginTop: '0.5rem',
-                    fontFamily: '"Source Sans 3", sans-serif',
-                  }}>{book.description}</Typography>
-                </Box>
+    <Box sx={{
+      marginTop: '4rem',
+      display: 'flex',
+      justifyContent: 'center',
+      flexWrap: 'wrap',
+      gap: '0.5rem',
+      maxWidth: 'calc(900px + 1rem)',
+    }}>
+      {
+        BOOKS.map((book) => {
+          return (
+            <Box className='collab' key={book.title} sx={{
+              ...styles.collab,
+              backgroundImage: `url(${book.cover})`,
+              zIndex: 2,
+            }}>
+              <Box sx={styles.collabInner}>
+                <Typography sx={{
+                  fontFamily: '"Source Sans 3", sans-serif',
+                  fontWeight: 'bold',
+                  fontSize: '1.5rem',
+                }}>{book.title}</Typography>
+                <Typography sx={{
+                  fontFamily: '"Source Sans 3", sans-serif',
+                  fontStyle: 'italic',
+                  color: '#a0a0a0',
+                }}>{book.author}</Typography>
+                <Typography sx={{
+                  marginTop: '0.5rem',
+                  fontFamily: '"Source Sans 3", sans-serif',
+                }}>{book.description}</Typography>
               </Box>
-            )
-          })
-        }
-        <Box sx={{
-          opacity: 0.1,
-          position: 'absolute',
-          display: 'flex',
-          transform: 'rotate(-35deg)',
-          top: '2rem',
-          left: '-22rem',
-        }}>
-          <img src={FeatherGraphicRight} alt='feather graphic' height={500} />
-        </Box>
-      </Box>
+            </Box>
+          )
+        })
+      }
+    </Box>
   )
 }
 

@@ -1,21 +1,17 @@
-import { Box, Typography } from '@mui/material';
-import BackgroundImage from '/offer-background.png';
+import { Box, Button, TextField, Typography } from '@mui/material';
+
+import PaperPlane from '/paper-plane.png';
 
 const Contact = () => {
   return (
     <Box
       id='main-contact'
       sx={{
-        minHeight: 800,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         padding: '4rem 0',
-        backgroundImage: `url(${BackgroundImage})`,
         backgroundColor: '#8B1A29',
-        backgroundPosition: 'center',
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
       }}
     >
       <Typography
@@ -32,12 +28,80 @@ const Contact = () => {
       <Box
         sx={{
           marginTop: '2rem',
+          display: 'flex',
+          justifyContent: 'center',
         }}
       >
-        {/* Wstawić formularz */}
+        <Box sx={{
+          width: 450,
+          height: 450,
+          backgroundColor: '#1f1f1f',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          padding: '4rem 3rem',
+          color: '#fff',
+          position: 'relative',
+        }}>
+          <Typography variant='h4' sx={{
+            fontFamily: 'Vollkorn, serif',
+            fontWeight: 'bold',
+          }}>
+            Formularz kontaktowy
+          </Typography>
+          <Typography sx={{
+            fontFamily: '"Source Sans 3", sans-serif',
+            marginTop: '1rem',
+          }}>
+            Masz pytania? Chcesz umówić się na wycenę? Skorzystaj z fomularza obok! To najprostsza i najwygodniejsza 
+            forma kontaktu w celu ustalenia dalszych szczegółów.
+          </Typography>
+          <Box sx={{
+            position: 'absolute',
+            bottom: '2rem',
+            right: '3rem',
+          }}>
+            <img src={PaperPlane} alt='paper plane' width={200} />
+          </Box>
+        </Box>
+        <Box sx={{
+          width: 700,
+          height: 450,
+          backgroundColor: '#efefef',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '1rem',
+          padding: '2rem 3rem',
+        }}>
+          <TextField
+            required
+            id='email'
+            label='E-mail'
+            sx={styles.formTextField}
+          />
+          <TextField
+            required
+            multiline
+            rows={10}
+            id='message'
+            label='Treść wiadomości'
+            sx={styles.formTextField}
+          />
+          <Button variant='contained' sx={{
+            alignSelf: 'flex-start',
+          }}>Wyślij</Button>
+        </Box>
       </Box>
     </Box>
   );
 }
+
+const styles = {
+  formTextField: {
+    width: '100%',
+  },
+};
 
 export default Contact;

@@ -3,6 +3,8 @@ import { Box, Typography } from '@mui/material';
 import Collabs from './Collabs';
 import Reviews from './Reviews';
 
+import FeathersBackground from '/feathers-background.png';
+
 const Portfolio = () => {
   return (
     <Box
@@ -12,8 +14,12 @@ const Portfolio = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#fff',
         padding: '4rem 0',
+        backgroundColor: '#fff',
+        backgroundImage: `url(${FeathersBackground})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain',
+        backgroundPosition: 'top center',
       }}
     >
       <Typography
