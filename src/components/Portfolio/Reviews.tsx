@@ -1,11 +1,15 @@
-import { Box, Typography } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { Box } from '@mui/material';
 
-import QuotationMarkIcon from '@mui/icons-material/FormatQuote';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 import Reviewer1 from '../../assets/reviews/01.jpg';
 import Reviewer2 from '../../assets/reviews/02.jpg';
+import Reviewer3 from '../../assets/reviews/03.jpg';
+import Review from './Review';
 
-interface IReview {
+export interface IReview {
   image: string;
   name: string;
   title: string;
@@ -30,96 +34,70 @@ const REVIEWS: IReview[] = [
     text: 'Phasellus et turpis varius, bibendum diam non, consectetur purus. Nullam nisi sem, luctus ut luctus id, \
       efficitur sed leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare magna ut ante \
       volutpat, in maximus lectus cursus. Nam facilisis erat sed convallis blandit. Ut ut lorem et.',
+    date: '30 lipca 2023',
+  },
+  {
+    image: Reviewer3,
+    name: 'Karolina Kaczmarek',
+    title: 'Autorka książki „Co ma być to będzie”',
+    text: 'Quisque condimentum libero purus, ut imperdiet tortor porta sed. Quisque eget viverra lectus. Vivamus \
+      faucibus ornare enim, condimentum suscipit erat. Ut purus odio, vestibulum ac tincidunt vitae, fermentum \
+      viverra sem. Sed posuere luctus lacinia. Integer vitae tortor posuere mauris fringilla dolor.',
     date: '2 sierpnia 2023',
   },
 ];
 
 const Reviews = () => {
+  const [reviewIndex, setReviewIndex] = useState<number>(0);
+  const [reviewNextIndex, setReviewNextIndex] = useState<number>(1);
+
   return (
     <Box id='customer-reviews' sx={{
       width: '100%',
       display: 'flex',
       justifyContent:' center',
+      alignItems: 'center',
       gap: 2,
     }}>
-      {
-        REVIEWS.map(review => {
-          return (
-            <Box className='customer-review-box' key={review.name} sx={styles.customerReviewBox}>
-              <Box sx={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 4,
-              }}>
-                <Box className='customer-review-pic' sx={{
-                  ...styles.customerReviewPic,
-                  backgroundImage: `url(${review.image})`,
-                }} />
-                <Box>
-                  <Typography sx={{
-                    ...styles.customerReviewText,
-                    fontWeight: 'bold',
-                    fontSize: '2rem',
-                  }}>
-                    {review.name}
-                  </Typography>
-                  <Typography variant='subtitle2' sx={{
-                    ...styles.customerReviewText,
-                    fontStyle: 'italic',
-                    color: '#a0a0a0',
-                  }}>
-                    {review.title}
-                  </Typography>
-                </Box>
-              </Box>
-              <Box>
-                <Typography sx={{
-                  ...styles.customerReviewText,
-                  padding: '1rem',
-                }}>
-                  <QuotationMarkIcon fontSize='large' sx={{
-                    color: '#c7263b',
-                  }} />
-                </Typography>
-                <Typography sx={{
-                  ...styles.customerReviewText,
-                  padding: '0 1.5rem',
-                  textAlign: 'justify',
-                }}>
-                  {review.text}
-                </Typography>
-              </Box>
-              <Typography variant='subtitle2' sx={{
-                ...styles.customerReviewText,
-                position: 'absolute',
-                right: '2rem',
-                bottom: '1rem',
-                color: '#a0a0a0',
-              }}>{review.date}</Typography>
-            </Box>
-          )
-        })
-      }
+      <Box sx={styles.reviewNavBox} onClick={() => {
+        setReviewIndex(reviewIndex - 1 === -1 ? REVIEWS.length - 1 : reviewIndex - 1);
+        setReviewNextIndex(reviewNextIndex - 1 === -1 ? REVIEWS.length - 1 : reviewNextIndex - 1);
+      }}>
+        <ArrowLeftIcon sx={styles.reviewNavIcon} />
+      </Box>
+      <Box sx={{
+        gap: 1,
+        display: 'flex',
+        position: 'relative',
+      }}>
+        <Review review={REVIEWS[reviewIndex]} />
+        <Review review={REVIEWS[reviewNextIndex]} />
+      </Box>
+      <Box sx={styles.reviewNavBox} onClick={() => {
+        setReviewIndex(reviewIndex + 1 === REVIEWS.length ? 0 : reviewIndex + 1);
+        setReviewNextIndex(reviewNextIndex + 1 === REVIEWS.length ? 0 : reviewNextIndex + 1);
+      }}>
+        <ArrowRightIcon sx={styles.reviewNavIcon} />
+      </Box>
     </Box>
   )
 }
 
 const styles = {
-  customerReviewBox: {
-    width: 600,
-    height: 450,
-    position: 'relative',
-    padding: '2rem',
-    backgroundColor: '#f3f3f3',
+  reviewNavBox: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '1rem',
+    cursor: 'pointer',
+    transition: '0.2s ease-in-out',
+    '&:hover': {
+      backgroundColor: '#f3f3f3',
+      transition: '0.2s ease-in-out',
+    }
   },
-  customerReviewPic: {
-    width: 100,
-    height: 100,
-    backgroundSize: 'contain',
-    borderRadius: '50%',
-  },
-  customerReviewText: {
-    fontFamily: '"Source Sans 3", sans-serif',
+  reviewNavIcon: {
+    fontSize: 40,
   },
 };
 
