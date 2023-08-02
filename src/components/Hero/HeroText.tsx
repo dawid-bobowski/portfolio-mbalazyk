@@ -16,7 +16,7 @@ const HeroText = () => {
           maxWidth: 700,
         }}
       >
-        Pomogę Tobie zapanować nad Twoim tekstem! ✅
+        Pomogę Tobie zapanować nad Twoim tekstem!
       </Typography>
       <Box
         sx={{
