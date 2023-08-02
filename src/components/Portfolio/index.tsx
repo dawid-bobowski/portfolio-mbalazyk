@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 
 import Collabs from './Collabs';
+import Reviews from './Reviews';
 
 const Portfolio = () => {
   return (
@@ -23,9 +24,20 @@ const Portfolio = () => {
           fontWeight: 'bold',
         }}
       >
-        Kilka ostatnich współprac
+        Kilka ostatnich współprac...
       </Typography>
       <Collabs />
+      <Typography
+        variant='h5'
+        sx={{
+          fontFamily: 'Vollkorn, serif',
+          fontWeight: 'bold',
+          margin: '4rem 0',
+        }}
+      >
+        ...oraz parę słów od zadowolonych klientów
+      </Typography>
+      <Reviews />
     </Box>
   );
 }

@@ -52,9 +52,9 @@ const FooterOther = () => {
           fontWeight: 'bold',
         }}
         >
-          Strona stworzona przez Dawida Bobowskiego
+          Projekt strony — Dawid Bobowski
         </Typography>
-        <GitHubIcon />
+        <GitHubIcon fontSize='small' />
       </Box>
     </Box>
   )

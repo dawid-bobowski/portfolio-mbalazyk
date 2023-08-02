@@ -19,7 +19,7 @@ const FooterContact = () => {
         Telefon: (+48) 576 364 972
       </Typography>
       <Typography className='footer-box-text' sx={styles.footerBoxText}>
-        Email: martabalazyk@gmail.com
+        E-mail: martabalazyk@gmail.com
       </Typography>
       <Typography className='footer-box-text' sx={styles.footerBoxText}>
         Dostępność w ciągu dnia w godz. 8-16

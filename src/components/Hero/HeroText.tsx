@@ -27,8 +27,8 @@ const HeroText = () => {
         }}
       >
         <Typography sx={heroTextTypographyStyle}>
-          Nazywam się Marta Bałażyk i zajmuję się <em style={{ fontWeight: 'bold' }}>redakcją</em> oraz{' '}
-          <em style={{ fontWeight: 'bold' }}>korektą</em>.
+          Nazywam się Marta Bałażyk i zajmuję się <span style={{ fontWeight: 'bold' }}>redakcją</span> oraz{' '}
+          <span style={{ fontWeight: 'bold' }}>korektą</span>.
         </Typography>
         <Typography sx={heroTextTypographyStyle}>
           Aenean tristique dolor est, eget laoreet tellus semper at. Proin eget diam nisl. Curabitur dictum nisi nec
