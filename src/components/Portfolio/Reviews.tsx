@@ -58,6 +58,7 @@ const Reviews = () => {
       justifyContent:' center',
       alignItems: 'center',
       gap: 2,
+      zIndex: 2,
     }}>
       <Box sx={styles.reviewNavBox} onClick={() => {
         setReviewIndex(reviewIndex - 1 === -1 ? REVIEWS.length - 1 : reviewIndex - 1);

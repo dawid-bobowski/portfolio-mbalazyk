@@ -18,7 +18,7 @@ const Banner = (props: IBannerProps) => {
       className={sticky ? 'sticky' : ''}
       ref={stickyRef}
       sx={{
-        height: 120,
+        height: 100,
         maxWidth: 1920,
         zIndex: 10,
         width: '100%',

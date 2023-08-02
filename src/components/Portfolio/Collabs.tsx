@@ -6,6 +6,8 @@ import BookCover3 from '../../assets/book-covers/03.jpg';
 import BookCover4 from '../../assets/book-covers/04.jpg';
 import BookCover5 from '../../assets/book-covers/05.jpg';
 import BookCover6 from '../../assets/book-covers/06.jpg';
+import FeatherGraphicLeft from '../../assets/feather-graphic-left.png';
+import FeatherGraphicRight from '../../assets/feather-graphic-right.png';
 
 interface IBook {
   title: string;
@@ -67,14 +69,28 @@ const Collabs = () => {
           display: 'flex',
           justifyContent: 'center',
           flexWrap: 'wrap',
+          gap: '0.5rem',
+          maxWidth: 'calc(900px + 1rem)',
+          position: 'relative',
         }}
       >
+        <Box sx={{
+          opacity: 0.1,
+          position: 'absolute',
+          display: 'flex',
+          transform: 'rotate(35deg)',
+          top: '2rem',
+          right: '-22rem',
+        }}>
+          <img src={FeatherGraphicLeft} alt='feather graphic' height={500} />
+        </Box>
         {
           BOOKS.map((book) => {
             return (
               <Box className='collab' key={book.title} sx={{
                 ...styles.collab,
                 backgroundImage: `url(${book.cover})`,
+                zIndex: 2,
               }}>
                 <Box sx={styles.collabInner}>
                   <Typography sx={{
@@ -96,6 +112,16 @@ const Collabs = () => {
             )
           })
         }
+        <Box sx={{
+          opacity: 0.1,
+          position: 'absolute',
+          display: 'flex',
+          transform: 'rotate(-35deg)',
+          top: '2rem',
+          left: '-22rem',
+        }}>
+          <img src={FeatherGraphicRight} alt='feather graphic' height={500} />
+        </Box>
       </Box>
   )
 }

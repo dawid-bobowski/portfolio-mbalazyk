@@ -30,8 +30,9 @@ const App = () => {
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
+          backgroundColor: '#fff',
           margin: '0 auto',
-          marginTop: sticky ? '120px' : 0,
+          marginTop: sticky ? '100px' : 0,
         }}
       >
         <Banner

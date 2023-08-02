@@ -3,8 +3,8 @@ import { Box } from '@mui/material';
 import HeroText from './HeroText';
 import HeroActions from './HeroActions';
 
-import HeroImage from '../../assets/pexels-vlada-karpovich-4050364.jpg';
-import BooksGraphic from '../../assets/books-graphic-01.png';
+import HeroImage from '../../assets/hero-right-image.jpg';
+import BooksGraphic from '../../assets/books-graphic.png';
 
 const Hero = () => {
   return (
@@ -24,15 +24,17 @@ const Hero = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           padding: '2rem',
+          position: 'relative',
         }}
         >
         <HeroText />
         <HeroActions />
         <Box sx={{
           opacity: 0.04,
-          left: 500,
           bottom: 0,
           position: 'absolute',
+          display: 'flex',
+          right: '1rem',
         }}>
           <img src={BooksGraphic} alt='books graphic' width={400} />
         </Box>
