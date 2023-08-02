@@ -26,7 +26,6 @@ const Portfolio = () => {
         Kilka ostatnich współprac 🤝🏻
       </Typography>
       <Collabs />
-      <Collabs />
     </Box>
   );
 }

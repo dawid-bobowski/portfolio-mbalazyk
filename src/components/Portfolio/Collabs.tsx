@@ -3,6 +3,9 @@ import { Box, Typography } from '@mui/material';
 import BookCover1 from '../../assets/book-covers/01.jpg';
 import BookCover2 from '../../assets/book-covers/02.jpg';
 import BookCover3 from '../../assets/book-covers/03.jpg';
+import BookCover4 from '../../assets/book-covers/04.jpg';
+import BookCover5 from '../../assets/book-covers/05.jpg';
+import BookCover6 from '../../assets/book-covers/06.jpg';
 
 interface IBook {
   title: string;
@@ -33,6 +36,27 @@ const BOOKS: IBook[] = [
       id lobortis non, suscipit vitae est. Sed dictum ex.',
     cover: BookCover3,
   },
+  {
+    title: 'Spite House',
+    author: 'Gary Mansfield',
+    description: 'Aliquam quis fringilla diam. Curabitur nec orci est. Maecenas nec ligula et augue ultricies \
+      tristique.',
+    cover: BookCover4,
+  },
+  {
+    title: 'Alekhine\'s Gun',
+    author: 'Michael Chomsney',
+    description: 'Nulla congue, libero eu tincidunt auctor, quam lorem auctor ex, non tristique leo odio quis velit. \
+      Quisque non.',
+    cover: BookCover5,
+  },
+  {
+    title: 'Baby',
+    author: 'Melissa Kent',
+    description: 'Duis vitae fringilla risus. Donec tincidunt varius sem at ultricies. Vivamus ipsum arcu, pulvinar \
+      id lobortis non, suscipit vitae est. Sed dictum ex.',
+    cover: BookCover6,
+  },
 ]
 
 const Collabs = () => {
@@ -41,6 +65,8 @@ const Collabs = () => {
         sx={{
           marginTop: '4rem',
           display: 'flex',
+          justifyContent: 'center',
+          flexWrap: 'wrap',
         }}
       >
         {
