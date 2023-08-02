@@ -18,7 +18,7 @@
   width: 100%;
   min-height: 100vh;
   background-color: #f5f5f5;
-  background-image: url('../public/fresh_snow.png');
+  background-image: url('/fresh_snow.png');
 }
 
 a {

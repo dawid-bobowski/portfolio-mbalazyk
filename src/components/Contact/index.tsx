@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import BackgroundImage from '../../assets/offer-background.png';
+import BackgroundImage from '/offer-background.png';
 
 const Contact = () => {
   return (

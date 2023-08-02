@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import LogoPng from '../../assets/logo.png';
+import LogoPng from '/logo.png';
 
 const Logo = () => {
   return (

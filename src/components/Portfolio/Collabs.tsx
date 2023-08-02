@@ -6,8 +6,8 @@ import BookCover3 from '../../assets/book-covers/03.jpg';
 import BookCover4 from '../../assets/book-covers/04.jpg';
 import BookCover5 from '../../assets/book-covers/05.jpg';
 import BookCover6 from '../../assets/book-covers/06.jpg';
-import FeatherGraphicLeft from '../../assets/feather-graphic-left.png';
-import FeatherGraphicRight from '../../assets/feather-graphic-right.png';
+import FeatherGraphicLeft from '/feather-graphic-left.png';
+import FeatherGraphicRight from '/feather-graphic-right.png';
 
 interface IBook {
   title: string;

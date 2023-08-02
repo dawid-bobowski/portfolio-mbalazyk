@@ -3,8 +3,8 @@ import { Box } from '@mui/material';
 import HeroText from './HeroText';
 import HeroActions from './HeroActions';
 
-import HeroImage from '../../assets/hero-right-image.jpg';
-import BooksGraphic from '../../assets/books-graphic.png';
+import HeroImage from '/hero-right-image.jpg';
+import BooksGraphic from '/books-graphic.png';
 
 const Hero = () => {
   return (
