@@ -2,14 +2,12 @@ import { Button } from '@mui/material';
 
 interface IButtonContainedProps {
   text: string;
-  href: string;
 }
 
 const ButtonContained = (props: IButtonContainedProps) => {
   return (
     <Button
       variant='contained'
-      href={props.href}
       sx={{
         ...styles.styledButton,
         backgroundColor: '#c7263b',
