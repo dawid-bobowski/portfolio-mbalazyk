@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 
-import ButtonContained from '../ButtonContained';
-import ButtonOutlined from '../ButtonOutlined';
+import ButtonContained from './ButtonContained';
+import ButtonOutlined from './ButtonOutlined';
 
 const HeroActions = () => {
   return (
