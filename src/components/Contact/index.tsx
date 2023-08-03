@@ -1,8 +1,28 @@
+import { useEffect, useState } from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
 
 import PaperPlane from '/paper-plane.png';
 
+const emailValidation = /[a-z\d]{1,}[@][a-z\d]{1,}[.].{2,}$/;
+
 const Contact = () => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [messageError, setMessageError] = useState('');
+
+  useEffect(() => {
+    if (emailValidation.test(email)) {
+      setEmailError('');
+    }
+  }, [email]);
+
+  useEffect(() => {
+    if (message) {
+      setMessageError('');
+    }
+  }, [message]);
+
   return (
     <Box
       id='main-contact'
@@ -79,6 +99,10 @@ const Contact = () => {
             required
             id='email'
             label='E-mail'
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            error={!!emailError}
+            helperText={emailError}
             sx={styles.formTextField}
           />
           <TextField
@@ -87,11 +111,38 @@ const Contact = () => {
             rows={10}
             id='message'
             label='Treść wiadomości'
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+            error={!!messageError}
+            helperText={messageError}
             sx={styles.formTextField}
           />
-          <Button variant='contained' sx={{
-            alignSelf: 'flex-start',
-          }}>Wyślij</Button>
+          <Button
+            type='submit'
+            variant='contained'
+            onClick={(e) => {
+              e.preventDefault();
+              if (email === '') {
+                setEmailError('Wpisz e-mail');
+              } else {
+                setEmailError('');
+              }
+              if (!emailValidation.test(email)) {
+                setEmailError('Wprowadź poprawny e-mail');
+              }
+              if (message === '') {
+                setMessageError('Wpisz wiadomość');
+              } else {
+                setMessageError('');
+              }
+              if (email && message) {
+                window.open(`mailto:martabalazyk@gmail.com?subject=Formularz kontaktowy — ${email}&body=${message}`);
+              }
+            }}
+            sx={styles.styledButton}
+          >
+            Wyślij
+          </Button>
         </Box>
       </Box>
     </Box>
@@ -101,6 +152,17 @@ const Contact = () => {
 const styles = {
   formTextField: {
     width: '100%',
+  },
+  styledButton: {
+    zIndex: 2,
+    width: 200,
+    fontFamily: '"Source Sans 3", sans-serif',
+    textTransform: 'initial',
+    backgroundColor: '#c7263b',
+    '&:hover': {
+      backgroundColor: '#b6152a',
+      color: '#fff',
+    },
   },
 };
 

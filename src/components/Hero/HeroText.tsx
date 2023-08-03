@@ -1,5 +1,7 @@
 import { Box, Typography } from '@mui/material';
 
+import HeroActions from './HeroActions';
+
 const HeroText = () => {
   return (
     <>
@@ -36,6 +38,7 @@ const HeroText = () => {
           Ut non velit vel lectus feugiat placerat in et enim. In vel facilisis dolor. Ut elementum lorem ligula, sed
           ultricies risus varius maximus.
         </Typography>
+        <HeroActions />
       </Box>
     </>
   );

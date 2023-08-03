@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 
 import HeroText from './HeroText';
-import HeroActions from './HeroActions';
 
 import HeroImage from '/hero-right-image.jpg';
 import BooksGraphic from '/books-graphic.png';
@@ -28,7 +27,6 @@ const Hero = () => {
         }}
         >
         <HeroText />
-        <HeroActions />
         <Box sx={{
           opacity: 0.04,
           bottom: 0,

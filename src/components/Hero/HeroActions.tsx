@@ -1,11 +1,7 @@
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
 
-const primaryColor = '#c7263b';
-
-const heroActionsButtonStyle = {
-  fontFamily: '"Source Sans 3", sans-serif',
-  textTransform: 'initial',
-};
+import ButtonContained from '../ButtonContained';
+import ButtonOutlined from '../ButtonOutlined';
 
 const HeroActions = () => {
   return (
@@ -18,26 +14,8 @@ const HeroActions = () => {
         alignItems: 'center',
       }}
     >
-      {/* Customized Buttons: https://mui.com/material-ui/react-button/#customization */}
-      <Button
-        variant='contained'
-        sx={{
-          backgroundColor: primaryColor,
-          ...heroActionsButtonStyle,
-        }}
-      >
-        Zamów korektę
-      </Button>
-      <Button
-        variant='outlined'
-        sx={{
-          borderColor: primaryColor,
-          color: primaryColor,
-          ...heroActionsButtonStyle,
-        }}
-      >
-        Sprawdź ofertę
-      </Button>
+      <ButtonContained text='Zamów korektę' />
+      <ButtonOutlined text='Sprawdź ofertę' />
     </Box>
   );
 };
