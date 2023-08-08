@@ -5,7 +5,7 @@ import useSticky from './hooks/useSticky';
 
 import Banner from './components/Banner';
 import Hero from './components/Hero';
-import Offer from './components/Offer';
+import Offers from './components/Offers';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -40,7 +40,7 @@ const App = () => {
           stickyRef={stickyRef}
         />
         <Hero />
-        <Offer />
+        <Offers />
         <Portfolio />
         <Contact />
         <Footer />

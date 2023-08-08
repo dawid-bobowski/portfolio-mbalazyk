@@ -79,3 +79,7 @@ button:focus-visible {
   position: fixed;
   top: 0;
 }
+
+.slide-in {
+  transform: translateX(0) !important;
+}
