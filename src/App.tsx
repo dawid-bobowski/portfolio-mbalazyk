@@ -1,14 +1,12 @@
 import CssBaseline from '@mui/material/CssBaseline';
-import { Box } from '@mui/system';
+import { Routes, Route } from 'react-router-dom';
 
 import useSticky from './hooks/useSticky';
-
 import Banner from './components/Banner';
-import Hero from './components/Hero';
-import Offers from './components/Offers';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+
+import Home from './pages/Home';
+import About from './pages/About';
 
 // Routing:
 // -- About
@@ -22,29 +20,16 @@ const App = () => {
   return (
     <>
       <CssBaseline />
-      <Box
-        id='main-container'
-        sx={{
-          maxWidth: 1920,
-          minHeight: 800,
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          backgroundColor: '#fff',
-          margin: '0 auto',
-          marginTop: sticky ? '100px' : 0,
-        }}
-      >
-        <Banner
-          sticky={sticky}
-          stickyRef={stickyRef}
-        />
-        <Hero />
-        <Offers />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </Box>
+      <Banner
+        sticky={sticky}
+        stickyRef={stickyRef}
+      />
+      <Routes>
+        <Route path='/' element={<Home sticky={sticky} />} />
+        <Route path='/o-mnie' element={<About />} />
+        <Route path='*' element={<div style={{ height: 'calc(100vh - 400px)' }}>Błąd 404: Nie znaleziono strony.</div>} />
+      </Routes>
+      <Footer />
     </>
   );
 };

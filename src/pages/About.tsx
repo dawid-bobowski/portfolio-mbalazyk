@@ -7,9 +7,10 @@ const About = () => {
       sx={{
         height: 800,
         display: 'flex',
-        backgroundColor: '#f9f9f9',
       }}
-    ></Box>
+    >
+      O mnie
+    </Box>
   )
 }
 

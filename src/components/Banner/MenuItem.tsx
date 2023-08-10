@@ -1,34 +1,39 @@
 import { Box, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import './MenuItem.css';
 
-interface IMenuItemProps {
+export interface IMenuItemProps {
   text: string;
+  destination: string;
 }
 
 const MenuItem = (props: IMenuItemProps) => {
   return (
-    <Box
-      component='li'
-      sx={{
-        height: 100,
-        listStyle: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '0 1rem',
-        '&:hover': {
-          backgroundColor: 'rgba(0,0,0,0.03)',
-          cursor: 'pointer',
-        },
-      }}
-    >
-      <Typography
+    <Link to={props.destination}  className='main-menu-item'>
+      <Box
+        component='li'
         sx={{
-          fontFamily: '"Source Sans 3", sans-serif',
+          height: 100,
+          listStyle: 'none',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '0 1rem',
+          '&:hover': {
+            backgroundColor: 'rgba(0,0,0,0.03)',
+            cursor: 'pointer',
+          },
         }}
       >
-        {props.text}
-      </Typography>
-    </Box>
+        <Typography
+          sx={{
+            fontFamily: '"Source Sans 3", sans-serif',
+          }}
+          >
+          {props.text}
+        </Typography>
+      </Box>
+    </Link>
   );
 };
 

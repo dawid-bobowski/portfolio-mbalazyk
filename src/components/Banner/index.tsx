@@ -1,9 +1,26 @@
 import { Box } from '@mui/material';
 import SocialLinks from './SocialLinks';
-import MenuItem from './MenuItem';
+import MenuItem, { IMenuItemProps } from './MenuItem';
 import Logo from './Logo';
 
-const MENU_OPTIONS: string[] = ['Strona główna', 'O mnie', 'Oferta', 'Kontakt'];
+const MENU_OPTIONS: IMenuItemProps[] = [
+  {
+    text: 'Strona główna',
+    destination: '/',
+  },
+  {
+    text: 'O mnie',
+    destination: '/o-mnie',
+  },
+  {
+    text: 'Oferta',
+    destination: '/oferta',
+  },
+  {
+    text: 'Kontakt',
+    destination: '/kontakt',
+  },
+];
 
 interface IBannerProps {
   sticky: boolean;
@@ -54,8 +71,9 @@ const Banner = (props: IBannerProps) => {
           >
             {MENU_OPTIONS.map((item) => (
               <MenuItem
-                key={item}
-                text={item}
+                key={item.text}
+                text={item.text}
+                destination={item.destination}
               />
             ))}
           </Box>
