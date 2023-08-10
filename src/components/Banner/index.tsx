@@ -1,26 +1,9 @@
 import { Box } from '@mui/material';
-import SocialLinks from './SocialLinks';
-import MenuItem, { IMenuItemProps } from './MenuItem';
-import Logo from './Logo';
 
-const MENU_OPTIONS: IMenuItemProps[] = [
-  {
-    text: 'Strona główna',
-    destination: '/',
-  },
-  {
-    text: 'O mnie',
-    destination: '/o-mnie',
-  },
-  {
-    text: 'Oferta',
-    destination: '/oferta',
-  },
-  {
-    text: 'Kontakt',
-    destination: '/kontakt',
-  },
-];
+import SocialLinks from './SocialLinks';
+import MenuItem from './MenuItem';
+import Logo from './Logo';
+import { MENU_OPTIONS, PRIMARY_COLOR } from '../../constants';
 
 interface IBannerProps {
   sticky: boolean;
@@ -44,7 +27,7 @@ const Banner = (props: IBannerProps) => {
         justifyContent: 'space-between',
         padding: '0 4rem',
         backgroundColor: '#fff',
-        borderBottom: '4px #c7263b solid',
+        borderBottom: `4px ${PRIMARY_COLOR} solid`,
       }}
     >
       <Logo />

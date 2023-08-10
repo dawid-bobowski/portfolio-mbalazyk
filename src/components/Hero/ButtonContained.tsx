@@ -1,4 +1,5 @@
 import { Button } from '@mui/material';
+import { PRIMARY_COLOR } from '../../constants';
 
 interface IButtonContainedProps {
   text: string;
@@ -10,7 +11,7 @@ const ButtonContained = (props: IButtonContainedProps) => {
       variant='contained'
       sx={{
         ...styles.styledButton,
-        backgroundColor: '#c7263b',
+        backgroundColor: PRIMARY_COLOR,
         '&:hover': {
           backgroundColor: '#b6152a',
           color: '#fff',

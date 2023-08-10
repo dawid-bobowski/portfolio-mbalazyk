@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material';
 import QuotationMarkIcon from '@mui/icons-material/FormatQuote';
 
 import { IReview } from './Reviews';
+import { PRIMARY_COLOR } from '../../constants';
 
 interface IReviewProps {
   review: IReview;
@@ -44,7 +45,7 @@ const Review = (props: IReviewProps) => {
               padding: '1rem',
             }}>
               <QuotationMarkIcon fontSize='large' sx={{
-                color: '#c7263b',
+                color: PRIMARY_COLOR,
               }} />
             </Typography>
             <Typography sx={{

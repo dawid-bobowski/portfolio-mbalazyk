@@ -1,6 +1,5 @@
 import { Button } from '@mui/material';
-
-const primaryColor = '#c7263b';
+import { PRIMARY_COLOR } from '../../constants';
 
 interface IButtonOutlinedProps {
   text: string;
@@ -13,8 +12,8 @@ const ButtonOutlined = (props: IButtonOutlinedProps) => {
         sx={{
           ...styles.styledButton,
           backgroundColor: '#fff',
-          borderColor: primaryColor,
-          color: primaryColor,
+          borderColor: PRIMARY_COLOR,
+          color: PRIMARY_COLOR,
           '&:hover': {
             borderColor: '#b6152a',
             backgroundColor: '#fff7f9',

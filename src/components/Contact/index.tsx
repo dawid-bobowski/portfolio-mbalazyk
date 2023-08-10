@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
 
 import PaperPlane from '/paper-plane.png';
+import { EMAIL_VALIDATION, PRIMARY_COLOR } from '../../constants';
 
-const emailValidation = /[a-z\d]{1,}[@][a-z\d]{1,}[.].{2,}$/;
+
 
 const Contact = () => {
   const [email, setEmail] = useState('');
@@ -12,7 +13,7 @@ const Contact = () => {
   const [messageError, setMessageError] = useState('');
 
   useEffect(() => {
-    if (emailValidation.test(email)) {
+    if (EMAIL_VALIDATION.test(email)) {
       setEmailError('');
     }
   }, [email]);
@@ -127,7 +128,7 @@ const Contact = () => {
               } else {
                 setEmailError('');
               }
-              if (!emailValidation.test(email)) {
+              if (!EMAIL_VALIDATION.test(email)) {
                 setEmailError('Wprowadź poprawny e-mail');
               }
               if (message === '') {
@@ -158,7 +159,7 @@ const styles = {
     width: 200,
     fontFamily: '"Source Sans 3", sans-serif',
     textTransform: 'initial',
-    backgroundColor: '#c7263b',
+    backgroundColor: PRIMARY_COLOR,
     '&:hover': {
       backgroundColor: '#b6152a',
       color: '#fff',
