@@ -19,7 +19,7 @@ const Banner = (props: IBannerProps) => {
       ref={stickyRef}
       sx={{
         height: 100,
-        maxWidth: 1920,
+        maxWidth: sticky ? 'none' : 1920,
         zIndex: 10,
         width: '100%',
         display: 'flex',
@@ -28,6 +28,7 @@ const Banner = (props: IBannerProps) => {
         padding: '0 4rem',
         backgroundColor: '#fff',
         borderBottom: `4px ${PRIMARY_COLOR} solid`,
+        margin: sticky ? 'none' : '0 auto',
       }}
     >
       <Logo />

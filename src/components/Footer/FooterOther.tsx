@@ -20,7 +20,7 @@ const FooterOther = () => {
         gap: 2,
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'flex-start',
+        justifyContent: 'flex-end',
       }}>
         <Box className='social-icon-box' sx={styles.socialIconBox}>
           <LinkedInIcon className='social-icon' sx={styles.socialIcon} onClick={
@@ -44,6 +44,7 @@ const FooterOther = () => {
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'flex-end',
           gap: 1,
         }}
       >

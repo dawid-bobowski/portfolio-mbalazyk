@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 
 import './OfferBox.css';
 
-const boxVariant = {
+const BOX_VARIANT = {
   visible: { opacity: 1, scale: 1 },
   hidden: { opacity: 0, scale: 0 },
 };
@@ -24,7 +24,7 @@ const OfferBox = (props: IOfferBoxProps) => {
       initial='hidden'
       whileInView='visible'
       viewport={{ once: true }}
-      variants={boxVariant}
+      variants={BOX_VARIANT}
     >
       <Box className='offer-item' sx={styles.offerItem}>
         <Typography className='offer-title' variant='h5' sx={styles.offerTitle}>{props.title}</Typography>
