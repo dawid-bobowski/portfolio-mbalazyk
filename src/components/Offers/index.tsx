@@ -61,6 +61,7 @@ const Offers = () => {
           <Typography sx={{
             fontFamily: '"Source Sans 3", sans-serif',
             textTransform: 'initial',
+            fontSize: '1.2rem',
           }}>
             Więcej szczegółów
           </Typography>
@@ -76,10 +77,10 @@ const Offers = () => {
 const styles = {
   styledButton: {
     zIndex: 2,
-    width: 200,
+    width: 220,
     fontFamily: '"Source Sans 3", sans-serif',
     fontWeight: 'bold',
-    fontSize: '1rem',
+    fontSize: '1.5rem',
     textTransform: 'uppercase',
     padding: '0.75rem',
   },

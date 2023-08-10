@@ -1,9 +1,25 @@
 import { Box, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+
+import { MENU_OPTIONS } from '../../constants';
 
 const FooterPages = () => {
   return (
     <Box id='footer-pages' className='footer-box' sx={styles.footerBox}>
       <Typography className='footer-box-header' variant='h5' sx={styles.footerBoxHeader}>Strony</Typography>
+      <Box sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        marginTop: '1rem',
+      }}>
+        {MENU_OPTIONS.map((item) => (
+          <Link key={item.destination} to={item.destination} className='main-menu-item'>
+            <Typography sx={styles.footerBoxText}>
+              {item.text}
+            </Typography>
+          </Link>
+        ))}
+      </Box>
     </Box>
   )
 }
@@ -19,6 +35,7 @@ const styles = {
   },
   footerBoxText: {
     fontFamily: '"Source Sans 3", sans-serif',
+    color: '#fff',
   },
 };
 

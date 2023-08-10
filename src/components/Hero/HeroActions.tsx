@@ -35,6 +35,7 @@ const HeroActions = () => {
         <Typography sx={{
             fontFamily: '"Source Sans 3", sans-serif',
             textTransform: 'initial',
+            fontSize: '1.2rem',
           }}>
           Sprawdź ofertę
         </Typography>
@@ -52,7 +53,6 @@ const styles = {
     width: 200,
     fontFamily: '"Source Sans 3", sans-serif',
     fontWeight: 'bold',
-    fontSize: '1rem',
     textTransform: 'uppercase',
     padding: '0.75rem',
   },
