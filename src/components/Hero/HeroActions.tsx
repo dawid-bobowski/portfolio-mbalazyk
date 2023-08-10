@@ -1,9 +1,12 @@
-import { Box } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { Box, Button, Typography } from '@mui/material';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-import ButtonContained from './ButtonContained';
-import ButtonOutlined from './ButtonOutlined';
+import { PRIMARY_COLOR } from '../../constants';
 
 const HeroActions = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       id='hero-actions'
@@ -14,10 +17,45 @@ const HeroActions = () => {
         alignItems: 'center',
       }}
     >
-      <ButtonContained text='Zamów korektę' />
-      <ButtonOutlined text='Sprawdź ofertę' />
+      <Button
+        variant='contained'
+        onClick={() => navigate('/oferta')}
+        sx={{
+          ...styles.styledButton,
+          backgroundColor: '#fff',
+          color: PRIMARY_COLOR,
+          border: `1px solid ${PRIMARY_COLOR}`,
+          '&:hover': {
+            backgroundColor: PRIMARY_COLOR,
+            color: '#fff',
+            border: `1px solid ${PRIMARY_COLOR}`,
+          },
+        }}
+      >
+        <Typography sx={{
+            fontFamily: '"Source Sans 3", sans-serif',
+            textTransform: 'initial',
+          }}>
+          Sprawdź ofertę
+        </Typography>
+        <NavigateNextIcon sx={{
+            fontSize: 16,
+          }} />
+      </Button>
     </Box>
   );
+};
+
+const styles = {
+  styledButton: {
+    zIndex: 2,
+    width: 200,
+    fontFamily: '"Source Sans 3", sans-serif',
+    fontWeight: 'bold',
+    fontSize: '1rem',
+    textTransform: 'uppercase',
+    padding: '0.75rem',
+  },
 };
 
 export default HeroActions;
