@@ -8,6 +8,7 @@ import { useAppSelector } from '../app/hooks';
 
 const Home = () => {
   const sticky: boolean = useAppSelector(state => state.app.sticky);
+
   return (
     <Box
         id='main-container'
