@@ -1,17 +1,16 @@
 import { Box } from '@mui/material';
 
+import { useAppSelector } from '../../app/hooks';
+import useSticky from '../../hooks/useSticky';
 import SocialLinks from './SocialLinks';
 import MenuItem from './MenuItem';
 import Logo from './Logo';
 import { MENU_OPTIONS, PRIMARY_COLOR } from '../../constants';
 
-interface IBannerProps {
-  sticky: boolean;
-  stickyRef: React.RefObject<HTMLElement>;
-}
+const Banner = () => {
+  const sticky: boolean = useAppSelector(state => state.app.sticky);
+  const { stickyRef } = useSticky();
 
-const Banner = (props: IBannerProps) => {
-  const { sticky, stickyRef } = props;
   return (
     <Box
       id='main-menu'

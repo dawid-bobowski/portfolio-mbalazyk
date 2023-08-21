@@ -12,12 +12,11 @@ const appSlice = createSlice({
   name: 'app',
   initialState,
   reducers: {
-    setSticky(state, action: PayloadAction<{ newProps: IAppState }>) {
-      const { sticky } = action.payload.newProps;
-      state.sticky = sticky;
+    setGlobalSticky(state, action: PayloadAction<{ sticky: boolean }>) {
+      state.sticky = action.payload.sticky;
     },
   },
 });
 
-export const { setSticky } = appSlice.actions;
+export const { setGlobalSticky } = appSlice.actions;
 export default appSlice.reducer;

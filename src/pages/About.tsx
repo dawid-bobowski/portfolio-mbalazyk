@@ -5,11 +5,18 @@ const About = () => {
     <Box
       id='about'
       sx={{
-        height: 800,
+        minHeight: '100vh',
         display: 'flex',
       }}
     >
-      O mnie
+      <Box sx={{
+        width: 'calc(100vw - 8rem)',
+        height: 'calc(100vh - 104px - 8rem)',
+        margin: '4rem auto',
+        backgroundColor: '#fff',
+      }}>
+
+      </Box>
     </Box>
   )
 }
