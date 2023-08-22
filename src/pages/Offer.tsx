@@ -1,17 +1,13 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
-import Hero from '../components/Hero';
-import Offers from '../components/Offers';
-import Portfolio from '../components/Portfolio';
-import Contact from '../components/Contact';
 import { useAppSelector } from '../app/hooks';
 
-const Home = () => {
+const Offer = () => {
   const sticky: boolean = useAppSelector((state) => state.app.sticky);
 
   return (
     <Box
-      id='main-container'
+      id='contact'
       sx={{
         minHeight: 'calc(100vh - 100px)',
         display: 'flex',
@@ -24,17 +20,28 @@ const Home = () => {
           minHeight: 'calc(100vh - 100px - 8rem)',
           margin: '4rem auto',
           display: 'flex',
-          flexDirection: 'column',
           backgroundColor: '#fff',
         }}
       >
-        <Hero />
-        <Offers />
-        <Portfolio />
-        <Contact />
+        <Typography
+          variant='h4'
+          component='h1'
+          sx={{
+            width: '100%',
+            alignSelf: 'center',
+            textAlign: 'center',
+            fontFamily: 'Vollkorn, serif',
+            fontWeight: 'bold',
+            zIndex: 2,
+          }}
+        >
+          Strona z ofertą w budowie!
+          <br />
+          Przepraszamy za utrudnienia.
+        </Typography>
       </Box>
     </Box>
   );
 };
 
-export default Home;
+export default Offer;
