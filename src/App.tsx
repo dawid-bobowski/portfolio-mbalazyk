@@ -1,5 +1,6 @@
 import CssBaseline from '@mui/material/CssBaseline';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import Banner from './components/Banner';
 import Footer from './components/Footer';
@@ -7,8 +8,15 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Offer from './pages/Offer';
+import NotFound from './pages/NotFound';
 
 const App = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <>
       <CssBaseline />
@@ -32,7 +40,7 @@ const App = () => {
         />
         <Route
           path='*'
-          element={<div style={{ height: 'calc(100vh - 400px)' }}>Błąd 404: Nie znaleziono strony.</div>}
+          element={<NotFound />}
         />
       </Routes>
       <Footer />

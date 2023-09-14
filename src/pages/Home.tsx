@@ -14,7 +14,9 @@ const Home = () => {
       id='main-container'
       sx={{
         minHeight: 'calc(100vh - 100px)',
+        maxWidth: 1920,
         display: 'flex',
+        margin: '0 auto',
         marginTop: sticky ? '100px' : 0,
       }}
     >

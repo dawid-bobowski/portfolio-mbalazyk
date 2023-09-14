@@ -29,7 +29,7 @@ const useSticky = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [setSticky, stickyRef, offset, dispatch]);
-  return { stickyRef };
+  return { sticky, stickyRef };
 };
 
 export default useSticky;

@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 
 import { useAppSelector } from '../app/hooks';
 
-const Contact = () => {
+const NotFound = () => {
   const sticky: boolean = useAppSelector((state) => state.app.sticky);
 
   return (
@@ -37,13 +37,11 @@ const Contact = () => {
             zIndex: 2,
           }}
         >
-          Strona kontaktowa w budowie!
-          <br />
-          Przepraszamy za utrudnienia.
+          Nie znaleziono strony...
         </Typography>
       </Box>
     </Box>
   );
 };
 
-export default Contact;
+export default NotFound;
