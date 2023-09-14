@@ -86,7 +86,7 @@ const Contact = () => {
           </Box>
         </Box>
         <Box sx={{
-          width: { xs: 400, lg: 600, xl: 700 },
+          width: { xs: 400, lg: 550, xl: 700 },
           height: 450,
           backgroundColor: '#efefef',
           display: 'flex',

@@ -60,7 +60,7 @@ const About = () => {
               zIndex: 2,
             }}
           >
-            Nazywam się <span style={{ color: PRIMARY_COLOR }}>Marta Bałażyk</span>,<br /> a praca z tekstem to moja
+            Nazywam się <span style={{ color: PRIMARY_COLOR }}>Marta Bałażyk</span>, a praca z tekstem to moja
             pasja!
           </Typography>
           <Typography
