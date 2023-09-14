@@ -36,6 +36,7 @@ const About = () => {
             backgroundImage: `url(${AuthorImage})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         ></Box>
         <Box

@@ -48,14 +48,15 @@ const Contact = () => {
       </Typography>
       <Box
         sx={{
-          marginTop: '2rem',
+          marginTop: { xs: '4rem', lg: '2rem' },
           display: 'flex',
           justifyContent: 'center',
+          flexDirection: { xs: 'column', lg: 'row' },
         }}
       >
         <Box sx={{
-          width: 450,
-          height: 450,
+          width: { xs: 700, lg: 450 },
+          height: {xs: 300, lg: 450 },
           backgroundColor: '#1f1f1f',
           display: 'flex',
           flexDirection: 'column',
@@ -86,7 +87,7 @@ const Contact = () => {
           </Box>
         </Box>
         <Box sx={{
-          width: { xs: 400, lg: 550, xl: 700 },
+          width: { xs: 700, lg: 550, xl: 700 },
           height: 450,
           backgroundColor: '#efefef',
           display: 'flex',

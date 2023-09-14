@@ -12,6 +12,7 @@ const HeroText = () => {
           fontFamily: 'Vollkorn, serif',
           fontWeight: 'bold',
           maxWidth: 700,
+          fontSize: { xs: '2rem', md: '2.25rem', lg: '3rem' },
         }}
       >
         Pomogę Tobie zapanować nad Twoim tekstem!

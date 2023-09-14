@@ -31,7 +31,7 @@ const FooterContact = () => {
 const styles = {
   footerBox: {
     width: '100%',
-    padding: '0 4rem',
+    padding: { md: '0 2rem', lg: '0 4rem' },
   },
   footerBoxHeader: {
     fontFamily: '"Source Sans 3", sans-serif',

@@ -22,7 +22,8 @@ const Hero = () => {
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'column',
-          padding: '8rem 2rem 0 2rem',
+          padding: '4rem 2rem 0 2rem',
+          paddingTop: { md: '4rem', lg: '8rem' },
           position: 'relative',
         }}
         >

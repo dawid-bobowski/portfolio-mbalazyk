@@ -13,7 +13,7 @@ const Footer = () => {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        padding: '4rem',
+        padding: { md: '2rem', lg: '4rem' },
         backgroundColor: '#0F0F0F',
         color: '#FFF',
       }}
