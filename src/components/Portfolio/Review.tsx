@@ -6,17 +6,22 @@ import { PRIMARY_COLOR } from '../../constants';
 
 interface IReviewProps {
   review: IReview;
+  hide?: boolean;
 }
 
 const Review = (props: IReviewProps) => {
-  const { review } = props;
+  const { review, hide } = props;
 
   return (
-    <Box className='customer-review-box' key={review.name} sx={styles.customerReviewBox}>
+    <Box className='customer-review-box' key={review.name} sx={{
+      ...styles.customerReviewBox,
+      display: { xs: hide ? 'block' : 'none', lg: 'block'  },
+    }}>
           <Box sx={{
             display: 'flex',
             alignItems: 'center',
-            gap: 4,
+            gap: { xs: 3, xl: 4 },
+            minHeight: 100,
           }}>
             <Box className='customer-review-pic' sx={{
               ...styles.customerReviewPic,
@@ -26,7 +31,7 @@ const Review = (props: IReviewProps) => {
               <Typography sx={{
                 ...styles.customerReviewText,
                 fontWeight: 'bold',
-                fontSize: '2rem',
+                fontSize: { xs: '1.75rem', xl: '2rem' },
               }}>
                 {review.name}
               </Typography>
@@ -69,7 +74,7 @@ const Review = (props: IReviewProps) => {
 
 const styles = {
   customerReviewBox: {
-    width: 600,
+    maxWidth: 600,
     height: 450,
     position: 'relative',
     padding: '2rem',

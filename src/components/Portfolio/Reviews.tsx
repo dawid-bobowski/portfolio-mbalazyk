@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Box } from '@mui/material';
 
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
@@ -72,7 +72,7 @@ const Reviews = () => {
         position: 'relative',
       }}>
         <Review review={REVIEWS[reviewIndex]} />
-        <Review review={REVIEWS[reviewNextIndex]} />
+        <Review review={REVIEWS[reviewNextIndex]} hide />
       </Box>
       <Box sx={styles.reviewNavBox} onClick={() => {
         setReviewIndex(reviewIndex + 1 === REVIEWS.length ? 0 : reviewIndex + 1);
