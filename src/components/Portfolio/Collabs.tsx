@@ -103,8 +103,8 @@ const Collabs = () => {
 
 const styles = {
   collab: {
-    width: 300,
-    height: 300,
+    width: { xs: 250, md: 300 },
+    height: { xs: 250, md: 300 },
     display: 'flex',
     alignItems: 'center',
     backgroundRepeat: 'no-repeat',

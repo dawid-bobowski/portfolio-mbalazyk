@@ -9,16 +9,16 @@ export interface IMenuItemProps {
 
 const MenuItem = (props: IMenuItemProps) => {
   return (
-    <Link to={props.destination}  className='main-menu-item'>
+    <Link to={props.destination} className='main-menu-item'>
       <Box
         component='li'
         sx={{
-          height: 100,
+          height: { xs: '4.5rem', md: 100 },
           listStyle: 'none',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '0 1rem',
+          padding: { xs: '1rem 2rem', md: '0 1rem' },
           '&:hover': {
             backgroundColor: 'rgba(0,0,0,0.03)',
             cursor: 'pointer',
@@ -28,6 +28,7 @@ const MenuItem = (props: IMenuItemProps) => {
         <Typography
           sx={{
             fontFamily: '"Source Sans 3", sans-serif',
+            fontSize: { xs: '1.25rem', md: '1rem' },
           }}
           >
           {props.text}

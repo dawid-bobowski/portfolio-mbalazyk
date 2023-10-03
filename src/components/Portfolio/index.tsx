@@ -28,6 +28,7 @@ const Portfolio = () => {
         sx={{
           fontFamily: 'Vollkorn, serif',
           fontWeight: 'bold',
+          fontSize: { xs: '2.5rem', md: '3rem' },
         }}
       >
         Kilka ostatnich współprac...

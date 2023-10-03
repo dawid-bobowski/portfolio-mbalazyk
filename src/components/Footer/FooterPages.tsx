@@ -10,6 +10,7 @@ const FooterPages = () => {
       <Box sx={{
         display: 'flex',
         flexDirection: 'column',
+        alignItems: { xs: 'center', md: 'flex-start' },
         marginTop: '1rem',
       }}>
         {MENU_OPTIONS.map((item) => (
@@ -32,6 +33,7 @@ const styles = {
   footerBoxHeader: {
     fontFamily: '"Source Sans 3", sans-serif',
     fontWeight: 'bold',
+    textAlign: { xs: 'center', md: 'left' },
   },
   footerBoxText: {
     fontFamily: '"Source Sans 3", sans-serif',

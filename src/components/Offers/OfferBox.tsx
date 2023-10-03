@@ -46,7 +46,7 @@ const styles = {
   offerItem: {
     backgroundColor: '#fff',
     borderRadius: '1rem',
-    width: { md: 550, lg: 700 },
+    width: { xs: 550, lg: 700 },
     minHeight: 200,
     padding: 4,
     boxShadow: '8px 8px 0px #f0f0f0',
