@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { ClickAwayListener } from '@mui/material';
 
 import { useAppSelector } from '../../app/hooks';
 import useSticky from '../../hooks/useSticky';
@@ -73,17 +74,21 @@ const Banner = () => {
         </nav>
       </Box>
       <SocialLinks />
-      <MenuIcon
-        id='main-menu-button'
-        onClick={() => {
-          document.getElementById('main-menu-wrapper')?.classList.toggle('menu-open');
-        }}
-        sx={{
-          position: 'absolute',
-          right: '4rem',
-          fontSize: '2rem',
-          display: { xs: 'inline-block', md: 'none' },
-        }} />
+      <ClickAwayListener onClickAway={
+        () => document.getElementById('main-menu-wrapper')?.classList.toggle('menu-open')
+      }>
+        <MenuIcon
+          id='main-menu-button'
+          onClick={() => {
+            document.getElementById('main-menu-wrapper')?.classList.toggle('menu-open');
+          }}
+          sx={{
+            position: 'absolute',
+            right: '4rem',
+            fontSize: '2rem',
+            display: { xs: 'inline-block', md: 'none' },
+          }} />
+      </ClickAwayListener>
     </Box>
   );
 };
