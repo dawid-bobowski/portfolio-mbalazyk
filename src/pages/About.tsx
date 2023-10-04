@@ -25,13 +25,14 @@ const About = () => {
           minHeight: 'calc(100vh - 100px - 8rem)',
           margin: '4rem auto',
           display: 'flex',
+          flexDirection: { xs: 'column', sm750: 'row' },
           backgroundColor: '#fff',
         }}
       >
         <Box
           sx={{
-            width: '60%',
-            height: '100vh',
+            width: { xs: '100%', sm750: '60%' },
+            height: { xs: '50vh', sm750: '100vh' },
             backgroundColor: PRIMARY_COLOR,
             backgroundImage: `url(${AuthorImage})`,
             backgroundRepeat: 'no-repeat',
@@ -41,7 +42,7 @@ const About = () => {
         ></Box>
         <Box
           sx={{
-            width: 'calc(100% - 4rem)',
+            width: { xs: '100%', sm750: 'calc(100% - 4rem)' },
             height: '100%',
             padding: '2rem',
             display: 'flex',
@@ -59,6 +60,7 @@ const About = () => {
               fontFamily: 'Vollkorn, serif',
               fontWeight: 'bold',
               zIndex: 2,
+              fontSize: { xs: '1.75rem', md: '2.125rem' },
             }}
           >
             Nazywam się <span style={{ color: PRIMARY_COLOR }}>Marta Bałażyk</span>, a praca z tekstem to moja

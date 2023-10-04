@@ -43,7 +43,7 @@ const Offers = () => {
         ))}
       </Box>
       <Box sx={{
-        marginTop: 10,
+        marginTop: { xs: 5, lg: 10 },
       }}>
         <Button
           variant='contained'

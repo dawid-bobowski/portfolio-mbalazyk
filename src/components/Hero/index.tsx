@@ -19,11 +19,11 @@ const Hero = () => {
         id='hero-left'
         sx={{
           width: '100%',
-          height: '100%',
+          height: { xs: '70%', md: '100%' },
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'column',
-          padding: {xs: '4rem 2rem', md: '4rem 2rem 0 2rem' },
+          padding: { xs: '4rem 2rem', md: '4rem 2rem 0 2rem' },
           paddingTop: { md: '4rem', lg: '8rem' },
           position: 'relative',
         }}

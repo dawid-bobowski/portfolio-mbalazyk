@@ -51,11 +51,12 @@ const Contact = () => {
           marginTop: { xs: '4rem', lg: '2rem' },
           display: 'flex',
           justifyContent: 'center',
+          alignItems: 'center',
           flexDirection: { xs: 'column', lg: 'row' },
         }}
       >
         <Box sx={{
-          width: { xs: 700, lg: 450 },
+          width: { xs: '90%', lg: 450 },
           height: {xs: 300, lg: 450 },
           backgroundColor: '#1f1f1f',
           display: 'flex',
@@ -87,7 +88,7 @@ const Contact = () => {
           </Box>
         </Box>
         <Box sx={{
-          width: { xs: 700, lg: 550, xl: 700 },
+          width: { xs: '90%', lg: 550, xl: 700 },
           height: 450,
           backgroundColor: '#efefef',
           display: 'flex',
@@ -159,6 +160,7 @@ const styles = {
     zIndex: 2,
     width: 200,
     fontFamily: '"Source Sans 3", sans-serif',
+    fontSize: '1rem',
     textTransform: 'initial',
     backgroundColor: PRIMARY_COLOR,
     '&:hover': {

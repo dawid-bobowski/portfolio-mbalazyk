@@ -37,16 +37,16 @@ const styles = {
   offerItemWrapper: {
     position: 'relative',
     '&:nth-of-type(2n)': {
-      left: { xs: -50, lg: -100 },
+      left: { xs: 0, sm: -20, sm750: -50, lg: -100 },
     },
     '&:nth-of-type(2n+1)': {
-      left: { xs: 50, lg: 100 },
+      left: { xs: 0, sm: 20, sm750: 50, lg: 100 },
     },
   },
   offerItem: {
     backgroundColor: '#fff',
     borderRadius: '1rem',
-    width: { xs: 550, lg: 700 },
+    width: { xs: 350, sm: 400, sm750: 450, md: 550, lg: 700 },
     minHeight: 200,
     padding: 4,
     boxShadow: '8px 8px 0px #f0f0f0',

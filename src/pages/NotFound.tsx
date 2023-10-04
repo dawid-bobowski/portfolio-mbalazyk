@@ -35,6 +35,7 @@ const NotFound = () => {
             fontFamily: 'Vollkorn, serif',
             fontWeight: 'bold',
             zIndex: 2,
+            fontSize: {xs: '1.75rem', sm750: '2.125rem' },
           }}
         >
           Nie znaleziono strony...
